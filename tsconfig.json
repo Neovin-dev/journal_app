@@ -12,6 +12,9 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
+    /* Check my TypeScript code, but don't generate any JavaScript files. as vite will handle the bundling and converfsion from tsc to js
+    TypeScript checks your code and reports errors, but doesn't create a dist directory.
+    */
     "noEmit": true,
 
     /* Linting */

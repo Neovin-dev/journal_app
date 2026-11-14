@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: journal-db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: journal_user
+      POSTGRES_PASSWORD: development_password
+      POSTGRES_DB: journal_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - journal_data:/var/lib/postgresql/data
+
+volumes:
+  journal_data:
