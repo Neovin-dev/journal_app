@@ -8,7 +8,7 @@ async function testConnection() {
                 current_database() AS database,
                 current_user AS connected_user;
                 `);
-    console.log(result.rows[0]);
+    console.log(result.rows[0], result);
   } catch (e) {
     console.error("Datanse connection failed:", e);
   } finally {
